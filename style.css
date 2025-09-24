@@ -182,7 +182,7 @@ form input,
 form textarea,
 form button{
   width: 600px;
-  padding: 0px;
+  padding:10px 0px;
   border: 1px #ddd solid;
   border-radius: 8px;
   margin-bottom: 18px;
@@ -193,12 +193,27 @@ form textarea:focus{
   border-color: #007bff;
   outline: none;
 }
-form button{
-  background-color: rgb(0, 183, 255);
+form button {
+  background: linear-gradient(90deg, #fff, aqua, #fff);
+  background-size: 200% auto; /* مهم للحركة */
+  animation: Moves 2s linear infinite;
   transition: opacity 0.5s ease;
-  width: 600px;
- 
+  width: 610px;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
 }
+
+@keyframes Moves {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
 form button:hover{
   opacity: 0.7;
   cursor: pointer;
@@ -274,4 +289,5 @@ form button:hover{
         margin: 10px;
     }
 }
+
 

@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 html{
     scroll-behavior: smooth;
     font-family: "Montserrat";
@@ -14,11 +10,9 @@ body{
     padding: 0;
     box-sizing: border-box;
     background-color:#000000 ;
-    display: flex;
+     display: flex;
     flex-direction: column;
     flex-wrap: nowrap; /* يمنع overflow-x */
-    overflow-x: hidden; /* يزيل أي overflow افتراضي */
-
 }
 
 .parent {
@@ -32,6 +26,7 @@ body{
    height: 100vh;
    background-position: center bottom;
    background-size: cover;
+   padding: 15px;
 
    .head{
     display: flex;
@@ -174,42 +169,36 @@ table tr:nth-child(even){
         background-position: 200% center;
     }
 }
-#form {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 0 10px; /* مساحة داخلية صغيرة عشان ما يلزق على أطراف الموبايل */
+#form{
+max-width: 600px;
+margin: 2px auto;
 }
-
-form label {
+form label{
   display: block;
   margin-bottom: 8px;
   font-weight: 600;
 }
-
 form input,
 form textarea,
-form button {
-  width: 100%;          /* يخلي العرض مرن */
-  max-width: 600px;     /* ما يتجاوز 600px */
-  padding: 10px;
+form button{
+  width: 600px;
+  padding: 10px 0px;
   border: 1px #ddd solid;
   border-radius: 8px;
   margin-bottom: 18px;
   font-size: 1rem;
-  box-sizing: border-box; /* يضمن الحساب الصحيح للعرض مع البادينغ */
 }
-
 form input:focus,
-form textarea:focus {
+form textarea:focus{
   border-color: #007bff;
   outline: none;
 }
-
 form button {
   background: linear-gradient(90deg, #fff, aqua, #fff);
-  background-size: 200% auto;
+  background-size: 200% auto; /* مهم للحركة */
   animation: Moves 2s linear infinite;
   transition: opacity 0.5s ease;
+  width: 610px;
   border: none;
   padding: 12px;
   font-size: 1rem;
@@ -225,44 +214,41 @@ form button {
   }
 }
 
-form button:hover {
+form button:hover{
   opacity: 0.7;
   cursor: pointer;
 }
-
-#returnUp a {
-  background-color: rgb(80, 197, 80);
+#returnUp a{
+  background-color: rgb(80,197,80);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 20px;
-  cursor: pointer;
-  color: white;
-  text-decoration: none;
-  transition: all 0.5s;
-  position: fixed;
-  bottom: 20px; /* أقرب للحافة السفلية */
-  right: 20px;  /* أقرب للحافة اليمنى */
-  border-radius: 50%;
-  z-index: 1000;
+ justify-content: center;
+ justify-items: center;
+ flex-wrap: wrap;
+ padding: 20px 25px;
+ cursor: pointer;
+ color: white;
+ text-decoration: none;
+ transition:all 0.5s;
+ position: fixed;
+ bottom: 50px;
+ right: 200px;
+ border-radius: 100px;
+ z-index: 1000; 
+}
+.div5{
+    padding: 15px;
 }
 @media (max-width: 768px){
-    body{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
     .parent{
         padding: 0;
     }
 .div1 {
-    width: 65%;
+    width: 61.5%;
     background-image: url("keyboard-5017973_640.jpg") no-repeat center 20%;
     background-size: 100% 100%;
     padding: 0;
     margin-bottom: 45px;
 }
-    
     .div2{
         width: 60%;
         padding: 0;
@@ -309,17 +295,10 @@ form button:hover {
         background-position: top center;
         padding: 10px;
     }
-    #Contact{
-        margin-left: 30px;
-    }
-    #countdown{
-        margin-left: 0;
-    }
     
 }
 
 @media (max-width: 480px){
-
     .Event {
         font-size: 2rem;
     }
@@ -327,14 +306,5 @@ form button:hover {
     #form {
         padding: 10px;
         margin: 10px;
-    }
-      form button {
-        font-size: 0.9rem;
-        padding: 10px;
-    }
-
-    #returnUp a {
-      padding: 12px 16px;
-      font-size: 0.9rem;
     }
 }

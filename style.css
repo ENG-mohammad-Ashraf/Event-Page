@@ -2,8 +2,7 @@ html{
     scroll-behavior: smooth;
     font-family: "Montserrat";
     color: #fff;
-    text-transform: capitalize;
-    overflow-x: hidden; /* يزيل أي overflow افتراضي */
+    text-transform: capitalize; /* يزيل أي overflow افتراضي */
 }
 body{
     margin: 0;
@@ -308,3 +307,4 @@ form button:hover{
         margin: 10px;
     }
 }
+
